@@ -1,0 +1,9 @@
+github.com/fw42/go-hpfeeds v0.0.0-20130602172243-651ce0355974 h1:uhCy0C/g2ZHFy6ylWj0fN4q3fhsXz9fk14HhvVwRTXM=
+github.com/fw42/go-hpfeeds v0.0.0-20130602172243-651ce0355974/go.mod h1:JMIrlQe3LV12tF9NCmZEvzxe6hW+JvB0kRhz0k6XR0U=
+github.com/jt6211/sockjs-go v0.0.0-20160127145910-881f0c021b1f h1:1GFAkJYmA64lipRKeg8fc6/s1IR+nV0e8ct+cacU4Ow=
+github.com/jt6211/sockjs-go v0.0.0-20160127145910-881f0c021b1f/go.mod h1:zSpu/E/rCH7TqaWVFsNNpRskr/BUbIJTS1r7XNJy5zs=
+golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
+golang.org/x/net v0.0.0-20190328230028-74de082e2cca h1:hyA6yiAgbUwuWqtscNvWAI7U1CtlaD1KilQ6iudt1aI=
+golang.org/x/net v0.0.0-20190328230028-74de082e2cca/go.mod h1:t9HGtf8HONx5eT2rtn7q6eTqICYqUVnKs3thJo3Qplg=
+golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
+golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
