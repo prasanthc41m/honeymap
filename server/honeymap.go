@@ -10,7 +10,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/fw42/go-hpfeeds"
+	"github.com/d1str0/hpfeeds"
 	"github.com/jt6211/sockjs-go/sockjs"
 )
 
@@ -113,7 +113,7 @@ func broadcast(input chan hpfeeds.Message) {
 
 func hpfeedsConnect(config Config, geolocEvents chan hpfeeds.Message) {
 	backoff := 0
-	hp := hpfeeds.NewHpfeeds(config.Host, config.Port, config.Ident, config.Auth)
+	hp := hpfeeds.NewClient(config.Host, config.Port, config.Ident, config.Auth)
 	hp.Log = true
 	log.Printf("Connecting to %s:%d...\n", config.Host, config.Port)
 	for {
