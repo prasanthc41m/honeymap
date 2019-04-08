@@ -2,25 +2,26 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/fw42/go-hpfeeds"
-	"github.com/jt6211/sockjs-go/sockjs"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
-	"time"
-	"runtime"
 	"path"
+	"runtime"
+	"time"
+
+	"github.com/fw42/go-hpfeeds"
+	"github.com/jt6211/sockjs-go/sockjs"
 )
 
 const staticDir = "../client"
 const bind = "0.0.0.0:3000"
 
 type Config struct {
-	Host  string
-	Port  int
-	Ident string
-	Auth  string
+	Host    string
+	Port    int
+	Ident   string
+	Auth    string
 	Channel string
 }
 
@@ -70,15 +71,15 @@ func stringInSlice(a string, list []string) bool {
 }
 
 var allowed = []string{
-	"city", 
-	"city2", 
-	"countrycode", 
-	"countrycode2", 
-	"latitude", 
-	"latitude2", 
-	"longitude", 
-	"longitude2", 
-	"md5", 
+	"city",
+	"city2",
+	"countrycode",
+	"countrycode2",
+	"latitude",
+	"latitude2",
+	"longitude",
+	"longitude2",
+	"md5",
 	"type",
 }
 
@@ -91,20 +92,20 @@ func broadcast(input chan hpfeeds.Message) {
 			log.Println(err, " on ", string(msg.Payload))
 			return
 		}
-	
+
 		m := f.(map[string]interface{})
 		for k, _ := range m {
-			if ! stringInSlice(k, allowed) {
+			if !stringInSlice(k, allowed) {
 				delete(m, k)
 			}
 		}
-		
+
 		if len(m) > 0 {
 			payload, err := json.Marshal(m)
 			if err == nil {
 				sockjsClients.Broadcast(payload)
 			}
-		}else{
+		} else {
 			log.Println("Skipping empty map")
 		}
 	}
@@ -134,7 +135,7 @@ func hpfeedsConnect(config Config, geolocEvents chan hpfeeds.Message) {
 func main() {
 	config := readConfig()
 
-	http.Handle("/", http.FileServer(http.Dir(dirname() + "/" + staticDir + "/")))
+	http.Handle("/", http.FileServer(http.Dir(dirname()+"/"+staticDir+"/")))
 	sockjsMux := sockjs.NewServeMux(http.DefaultServeMux)
 	sockjsConf := sockjs.NewConfig()
 	sockjsMux.Handle("/data", dataHandler, sockjsConf)
