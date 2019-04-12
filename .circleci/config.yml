@@ -22,9 +22,9 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       - run: 
-        command: go build
-        working_directory: server
+            command: go build
+            working_directory: server
 
       - run: 
-        command: go test -v ./...
-        working_directory: server
+            command: go test -v ./...
+            working_directory: server
