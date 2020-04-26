@@ -22,7 +22,7 @@ a {
   white-space: nowrap;
   background-color: transparent;
   color: white;
-  border: 1px transparent;
+  border: 1px solid grey;
   padding: 5px;
   font-family: 'Ubuntu Mono', monospace, fixed, sans-serif;
   font-size: 70%;
