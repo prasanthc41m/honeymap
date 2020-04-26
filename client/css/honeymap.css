@@ -3,10 +3,9 @@ body {
   padding: 0px;
   background-color: #009900;
   color: white;
-  background: -moz-linear-gradient(top, #339966, #009999, #339966);
-  background: -webkit-linear-gradient(top, #339966, #009999, #339966);
+  background: -moz-linear-gradient(top, #009999, #339966, #003300);
+  background: -webkit-linear-gradient(top, #009999, #339966, #003300);
 }
-
 
 a {
   color: white;
@@ -23,12 +22,11 @@ a {
   white-space: nowrap;
   background-color: transparent;
   color: white;
-  border: 1px solid #339966;
+  border: 1px transparent;
   padding: 5px;
   font-family: 'Ubuntu Mono', monospace, fixed, sans-serif;
   font-size: 70%;
 }
-
 
 #log div {
   display: inline;
