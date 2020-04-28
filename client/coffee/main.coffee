@@ -15,7 +15,7 @@ jQuery(document).ready ->
 
   log.add "<b>Welcome to Honeypot Network Project.</b>"
   log.add "Note that these are <b>all</b> honeypots of the Honeypot Network Project."
-  log.add "All attacks are shown below."
+  log.add ""
   log.add "Built with &#128151; c41m"
 
   new Feed(honeymap, log, "geoloc.events")
