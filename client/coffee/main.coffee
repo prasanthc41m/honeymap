@@ -13,7 +13,7 @@ jQuery(document).ready ->
     honeymap.fitSize()
     log.fitSize()
 
-  log.add "<b>Welcome to HoneyMap.)</b>"
+  log.add "<b>Welcome to Honeypot Network Project.)</b>"
   log.add "Note that these are <b>all</b> honeypots of the Honeypot Network Project."
   log.add "All attacks are shown below."
   log.add "Built with &#128151; c41m"
